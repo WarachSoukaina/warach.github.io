@@ -72,7 +72,28 @@
       bottom: -10px;
       left: 25%;
     }
-  </style>
+  
+.typing-container {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1em;
+    background-color: #000;
+    animation: blink 1s infinite;
+    vertical-align: middle;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+</style>
 </head>
 <body class="bg-light">
   
@@ -99,9 +120,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#portfolio">Portfolio</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#testimonials">Testimonials</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
           </li>
@@ -125,8 +146,9 @@
             <h1 class="text-warning text-uppercase fs-2 fw-bold">Full Stack PHP/Laravel Engineer</h1>
             <h2 class="fs-4">Soukaina WARACH</h2>
             <p class="mt-4 text-muted">
-              Versatile and autonomous developer with 5+ years experience creating innovative web applications. 
-              Passionate about building secure, performant solutions tailored to client needs.
+               <div id="typing-container" class="typing-container"></div>
+
+              
             </p>
             <div class="d-flex gap-3 mt-4">
               <a href="#portfolio" class="btn btn-warning px-4">View My Work</a>
@@ -153,6 +175,7 @@
         <div class="col-md-6">
           <div class="about-text">
             <h3 class="fs-4 mb-3">Full Stack Engineer PHP/Laravel</h3>
+          
             <p class="text-muted">
               I specialize in developing robust web applications using modern PHP frameworks. 
               With expertise spanning from database architecture to UI implementation, I deliver 
@@ -167,19 +190,19 @@
           <div class="row text-center text-uppercase my-4">
             <div class="col-sm-4">
               <div class="fact-item">
-                <h4 class="fs-1 fw-bold" data-counter="12">0</h4>
+                <h4 class="fs-1 fw-bold" data-counter="12">10</h4>
                 <p class="text-muted">Projects Completed</p>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="fact-item">
-                <h4 class="fs-1 fw-bold" data-counter="10">0</h4>
+                <h4 class="fs-1 fw-bold" data-counter="10">9</h4>
                 <p class="text-muted">Happy Clients</p>
               </div>
             </div>
             <div class="col-sm-4">
               <div class="fact-item">
-                <h4 class="fs-1 fw-bold" data-counter="10">0</h4>
+                <h4 class="fs-1 fw-bold" data-counter="10">9</h4>
                 <p class="text-muted">Positive Reviews</p>
               </div>
             </div>
@@ -192,10 +215,10 @@
                 <a href="https://www.linkedin.com/in/soukaina-warach/" class="text-dark" aria-label="LinkedIn">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://github.com/yourusername" class="text-dark" aria-label="GitHub">
+                <a href="https://github.com/WarachSoukaina/" class="text-dark" aria-label="GitHub">
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="https://twitter.com/yourhandle" class="text-dark" aria-label="Twitter">
+                <a href="#" class="text-dark" aria-label="Twitter">
                   <i class="fab fa-twitter"></i>
                 </a>
               </div>
@@ -238,7 +261,7 @@
           <div class="skill-item mb-4">
             <div class="d-flex justify-content-between">
               <h4 class="fs-6">HTML5/CSS3</h4>
-              <span class="text-muted">80%</span>
+              <span class="text-muted">90%</span>
             </div>
             <div class="progress" style="height: 8px;">
               <div class="progress-bar bg-warning" role="progressbar" style="width: 80%"></div>
@@ -315,10 +338,9 @@
             <div class="icon my-3 text-warning fs-2">
               <i class="fas fa-shield-alt"></i>
             </div>
-            <h3 class="fs-5 py-2">Web Security</h3>
+            <h3 class="fs-5 py-2">Canva Designs</h3>
             <p class="text-muted">
-              Implementing security best practices including CSRF protection, XSS prevention, 
-              and secure authentication systems.
+              Polished, professional resumes and CVs crafted in Canva—visually appealing layouts that highlight skills and experience with clarity and style.
             </p>
           </div>
         </div>
@@ -328,7 +350,7 @@
             <div class="icon my-3 text-warning fs-2">
               <i class="fas fa-rocket"></i>
             </div>
-            <h3 class="fs-5 py-2">Performance Optimization</h3>
+            <h3 class="fs-5 py-2">Performance Optimization and SEO </h3>
             <p class="text-muted">
               Improving application speed through code optimization, caching strategies, 
               and efficient database queries.
@@ -341,7 +363,7 @@
             <div class="icon my-3 text-warning fs-2">
               <i class="fas fa-project-diagram"></i>
             </div>
-            <h3 class="fs-5 py-2">API Development</h3>
+            <h3 class="fs-5 py-2">API Development and integration</h3>
             <p class="text-muted">
               Building RESTful APIs with Laravel for seamless integration between frontend 
               and backend systems.
@@ -370,10 +392,10 @@
               <img src="img/portfolio/11.jpg" class="w-100 img-fluid" alt="FilterChef Project" loading="lazy">
               <div class="portfolio-overlay d-flex align-items-center justify-content-center">
                 <div class="portfolio-content text-center p-3">
-                  <h3 class="text-white fs-5 mb-2">FilterChef</h3>
-                  <p class="text-white-50 mb-3">Recipe filtering web application</p>
-                  <a href="#" class="btn btn-sm btn-warning me-2">View Project</a>
-                  <a href="#" class="btn btn-sm btn-outline-light">Case Study</a>
+                  <h3 class="text-dark fs-5 mb-2">FilterChef</h3>
+                  <p class="text-dark-50 mb-3">Recipe and nutrition filtering web application</p>
+                  <a href="wwww.fiterchef.ma" class="btn btn-sm btn-warning me-2">View Project</a>
+                 
                 </div>
               </div>
             </div>
@@ -386,10 +408,10 @@
               <img src="img/portfolio/33.jpg" class="w-100 img-fluid" alt="Mindsity Project" loading="lazy">
               <div class="portfolio-overlay d-flex align-items-center justify-content-center">
                 <div class="portfolio-content text-center p-3">
-                  <h3 class="text-white fs-5 mb-2">Mindsity</h3>
-                  <p class="text-white-50 mb-3">Educational platform</p>
-                  <a href="#" class="btn btn-sm btn-warning me-2">View Project</a>
-                  <a href="#" class="btn btn-sm btn-outline-light">Case Study</a>
+                  <h3 class="text-dark fs-5 mb-2">Mindsity</h3>
+                  <p class="text-dark-50 mb-3">Educational platform</p>
+                  <a href="www.mindsity.ma" class="btn btn-sm btn-warning me-2">View Project</a>
+               
                 </div>
               </div>
             </div>
@@ -402,10 +424,10 @@
               <img src="img/portfolio/22.jpg" class="w-100 img-fluid" alt="ClickTakeul Project" loading="lazy">
               <div class="portfolio-overlay d-flex align-items-center justify-content-center">
                 <div class="portfolio-content text-center p-3">
-                  <h3 class="text-white fs-5 mb-2">ClickTakeul</h3>
-                  <p class="text-white-50 mb-3">Restaurant management system</p>
-                  <a href="#" class="btn btn-sm btn-warning me-2">View Project</a>
-                  <a href="#" class="btn btn-sm btn-outline-light">Case Study</a>
+                  <h3 class="text-dark fs-5 mb-2">FREE WLG</h3>
+                  <p class="text-dark-50 mb-3">WhatsApp link generator</p>
+                  <a href="https://warachfullstack.github.io/wlg/" class="btn btn-sm btn-warning me-2">View Project</a>
+                  
                 </div>
               </div>
             </div>
@@ -418,10 +440,9 @@
               <img src="img/portfolio/44.jpg" class="w-100 img-fluid" alt="Construction Management App" loading="lazy">
               <div class="portfolio-overlay d-flex align-items-center justify-content-center">
                 <div class="portfolio-content text-center p-3">
-                  <h3 class="text-white fs-5 mb-2">FreePrintablesWorld</h3>
-                  <p class="text-white-50 mb-3">Construction site management</p>
-                  <a href="#" class="btn btn-sm btn-warning me-2">View Project</a>
-                  <a href="#" class="btn btn-sm btn-outline-light">Case Study</a>
+                  <h3 class="text-dark fs-5 mb-2">FreePrintablesWorld</h3>
+                  <p class="text-dark-50 mb-3">Free Creative Printables Plateforme</p>
+                  <a href="www.freeprintablesworld.com" class="btn btn-sm btn-warning me-2">View Project</a> 
                 </div>
               </div>
             </div>
@@ -434,10 +455,9 @@
               <img src="img/portfolio/55.jpg" class="w-100 img-fluid" alt="E-commerce Solution" loading="lazy">
               <div class="portfolio-overlay d-flex align-items-center justify-content-center">
                 <div class="portfolio-content text-center p-3">
-                  <h3 class="text-white fs-5 mb-2">CVprogratuit</h3>
-                  <p class="text-white-50 mb-3">Custom e-commerce platform</p>
-                  <a href="#" class="btn btn-sm btn-warning me-2">View Project</a>
-                  <a href="#" class="btn btn-sm btn-outline-light">Case Study</a>
+                  <h3 class="text-dark fs-5 mb-2">CVprogratuit</h3>
+                  <p class="text-dark-50 mb-3">Free Resumes Template website</p>
+                  <a href="www.cvprogratuit.com" class="btn btn-sm btn-warning me-2">View Project</a> 
                 </div>
               </div>
             </div>
@@ -447,13 +467,12 @@
         <div class="col-md-6 col-lg-4">
           <div class="portfolio-item overflow-hidden rounded shadow-sm transition-all">
             <div class="portfolio-img">
-              <img src="img/portfolio/dashboard.jpg" class="w-100 img-fluid" alt="Admin Dashboard" loading="lazy">
+              <img src="img/portfolio/66.jpg" class="w-100 img-fluid" alt="Admin Dashboard" loading="lazy">
               <div class="portfolio-overlay d-flex align-items-center justify-content-center">
                 <div class="portfolio-content text-center p-3">
-                  <h3 class="text-white fs-5 mb-2">AdminPro</h3>
-                  <p class="text-white-50 mb-3">Custom admin dashboard</p>
-                  <a href="#" class="btn btn-sm btn-warning me-2">View Project</a>
-                  <a href="#" class="btn btn-sm btn-outline-light">Case Study</a>
+                  <h3 class="text-dark fs-5 mb-2">Canva Designs</h3>
+                  <p class="text-dark-50 mb-3">Professional resumes and CVs crafted in Canva</p>
+                  <a href="https://khamsat.com/designing/resume-design/3060172-%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D8%B3%D9%8A%D8%B1%D8%A9-%D8%B0%D8%A7%D8%AA%D9%8A%D8%A9-%D8%A8%D8%B4%D9%83%D9%84-%D8%A5%D8%AD%D8%AA%D8%B1%D8%A7%D9%81%D9%8A" class="btn btn-sm btn-warning me-2">View Project</a>
                 </div>
               </div>
             </div>
@@ -468,7 +487,7 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section class="testimonials py-5 bg-light" id="testimonials">
+  <!-- <section class="testimonials py-5 bg-light" id="testimonials">
     <div class="container-lg py-4">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -488,7 +507,7 @@
             </div>
             
             <div class="carousel-inner">
-              <!-- Testimonial 1 -->
+              
               <div class="carousel-item active">
                 <div class="testimonial-item bg-white p-4 p-lg-5 rounded shadow-sm text-center">
                   <div class="testimonial-author mb-4">
@@ -513,7 +532,7 @@
                 </div>
               </div>
               
-              <!-- Testimonial 2 -->
+               
               <div class="carousel-item">
                 <div class="testimonial-item bg-white p-4 p-lg-5 rounded shadow-sm text-center">
                   <div class="testimonial-author mb-4">
@@ -538,7 +557,7 @@
                 </div>
               </div>
               
-              <!-- Testimonial 3 -->
+               
               <div class="carousel-item">
                 <div class="testimonial-item bg-white p-4 p-lg-5 rounded shadow-sm text-center">
                   <div class="testimonial-author mb-4">
@@ -567,21 +586,21 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- CTA Section -->
+  </section>  
+ -->
+   
   <section class="freelancer-available py-5 bg-warning">
     <div class="container-lg py-4">
       <div class="row justify-content-center">
         <div class="col-lg-10 text-center">
           <h2 class="fs-1 mb-4 text-white fw-bold">Ready to Bring Your Project to Life?</h2>
           <p class="text-light fs-5 mb-4">
-            I'm currently available for freelance projects and full-time positions. 
+            I'm currently available for freelance projects and part-time positions. 
             Let's discuss how I can help you achieve your goals.
           </p>
           <div class="d-flex justify-content-center gap-3">
-            <a href="#contact" class="btn btn-light px-4 fw-bold">Get In Touch</a>
-            <a href="CV2025.pdf" download class="btn btn-outline-light px-4 fw-bold">Download CV</a>
+            <a href="mailto:soukaina.warach.eng@gmail.com" class="btn btn-light px-4 fw-bold">Get In Touch</a>
+            <a href="CV2025.pdf" download class="btn btn-outline-warning px-4 fw-bold">Download CV</a>
           </div>
         </div>
       </div>
@@ -638,13 +657,13 @@
               </div>
               <div class="text">
                 <h3 class="fs-5">LinkedIn</h3>
-                <p class="text-muted">linkedin.com/in/soukaina-warach</p>
+                <p class="text-muted"><a href="https://linkedin.com/in/soukaina-warach">linkedin.com/in/soukaina-warach</a></p>
               </div>
             </div>
           </div>
         </div>
         
-        <div class="col-md-7 mt-5 mt-md-0">
+        <!-- <div class="col-md-7 mt-5 mt-md-0">
           <div class="contact-form">
             <form id="contactForm" novalidate>
               <div class="row">
@@ -694,7 +713,9 @@
               Oops! Something went wrong. Please try again later.
             </div>
           </div>
-        </div>
+        </div> -->
+     
+     
       </div>
     </div>
   </section>
@@ -704,17 +725,17 @@
     <div class="container-lg">
       <div class="row align-items-center">
         <div class="col-md-6 text-center text-md-start">
-          <p class="m-0">© <span id="currentYear"></span> Soukaina WARACH. All rights reserved.</p>
+          <p class="m-0">© <span id="currentYear"></span> Designed By Soukaina WARACH.| All rights reserved.</p>
         </div>
         <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
           <div class="social-links">
             <a href="https://www.linkedin.com/in/soukaina-warach/" class="text-white me-3" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://github.com/yourusername" class="text-white me-3" aria-label="GitHub">
+            <a href="https://github.com/WarachSoukaina/" class="text-white me-3" aria-label="GitHub">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://twitter.com/yourhandle" class="text-white me-3" aria-label="Twitter">
+            <a href="#" class="text-white me-3" aria-label="Twitter">
               <i class="fab fa-twitter"></i>
             </a>
             <a href="#" class="text-white" aria-label="Instagram">
@@ -801,5 +822,51 @@
       const formSuccess = document.getElementById('formSuccess');
       const formError = document.getElementById('formError');
       
-      if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+    });
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      if (contactForm.checkValidity()) {
+        formSuccess.classList.remove('d-none');
+        formError.classList.add('d-none');
+        contactForm.reset();
+      } else {
+        formError.classList.remove('d-none');
+        formSuccess.classList.add('d-none');
+      }
+    });
+
+
+    
+function typeText(element, text, speed, callback) {
+    let i = 0;
+    element.innerHTML = '<span class="cursor"></span>'; // Start with just cursor
+    
+    function typing() {
+        if (i < text.length) {
+            // Replace cursor with text + cursor
+            const typedText = text.substring(0, i + 1);
+            element.innerHTML = typedText + '<span class="cursor"></span>';
+            i++;
+            
+            // Random slight delay for natural typing
+            const delay = speed * (0.7 + Math.random() * 0.6);
+            setTimeout(typing, delay);
+        } else if (callback) {
+            // Remove cursor when done
+            element.textContent = text;
+            callback();
+        }
+    }
+    
+    typing(); // Start the typing effect
+}
+
+// Usage:
+const container = document.getElementById('typing-container');
+const message = "Versatile and autonomous developer with 5+ years experience creating innovative web applications. Passionate about building secure, performant solutions tailored to client needs.";
+
+typeText(container, message, 20, () => {
+    console.log('Message fully typed!');
+});
+</script>
