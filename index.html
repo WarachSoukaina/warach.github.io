@@ -146,7 +146,7 @@
             <h1 class="text-warning text-uppercase fs-2 fw-bold">Full Stack PHP/Laravel Engineer</h1>
             <h2 class="fs-4">Soukaina WARACH</h2>
             <p class="mt-4 text-muted">
-               <div id="typing-container" class="typing-container"></div>
+               
 
               
             </p>
@@ -754,119 +754,5 @@
 
   <!-- JavaScript -->
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Document ready function
-    document.addEventListener('DOMContentLoaded', function() {
-      // Set current year in footer
-      document.getElementById('currentYear').textContent = new Date().getFullYear();
-      
-      // Back to top button
-      const backToTopButton = document.getElementById('backToTop');
-      
-      window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-          backToTopButton.classList.add('show');
-        } else {
-          backToTopButton.classList.remove('show');
-        }
-      });
-      
-      backToTopButton.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-      
-      // Navbar scroll effect
-      const navbar = document.querySelector('.navbar');
-      
-      window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 100) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
-      });
-      
-      // Counter animation
-      const counters = document.querySelectorAll('[data-counter]');
-      const speed = 200;
-      
-      function animateCounters() {
-        counters.forEach(counter => {
-          const target = +counter.getAttribute('data-counter');
-          const count = +counter.innerText;
-          const increment = target / speed;
-          
-          if (count < target) {
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(animateCounters, 1);
-          } else {
-            counter.innerText = target;
-          }
-        });
-      }
-      
-      // Start counter animation when section is in view
-      const aboutSection = document.querySelector('#about');
-      const observer = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-          animateCounters();
-          observer.unobserve(aboutSection);
-        }
-      }, { threshold: 0.5 });
-      
-      observer.observe(aboutSection);
-      
-      // Form validation
-      const contactForm = document.getElementById('contactForm');
-      const formSuccess = document.getElementById('formSuccess');
-      const formError = document.getElementById('formError');
-      
-    });
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      if (contactForm.checkValidity()) {
-        formSuccess.classList.remove('d-none');
-        formError.classList.add('d-none');
-        contactForm.reset();
-      } else {
-        formError.classList.remove('d-none');
-        formSuccess.classList.add('d-none');
-      }
-    });
-
-
-    
-function typeText(element, text, speed, callback) {
-    let i = 0;
-    element.innerHTML = '<span class="cursor"></span>'; // Start with just cursor
-    
-    function typing() {
-        if (i < text.length) {
-            // Replace cursor with text + cursor
-            const typedText = text.substring(0, i + 1);
-            element.innerHTML = typedText + '<span class="cursor"></span>';
-            i++;
-            
-            // Random slight delay for natural typing
-            const delay = speed * (0.7 + Math.random() * 0.6);
-            setTimeout(typing, delay);
-        } else if (callback) {
-            // Remove cursor when done
-            element.textContent = text;
-            callback();
-        }
-    }
-    
-    typing(); // Start the typing effect
-}
-
-// Usage:
-const container = document.getElementById('typing-container');
-const message = "Versatile and autonomous developer with 5+ years experience creating innovative web applications. Passionate about building secure, performant solutions tailored to client needs.";
-
-typeText(container, message, 20, () => {
-    console.log('Message fully typed!');
-});
-</script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
